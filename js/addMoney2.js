@@ -4,6 +4,10 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
     const addMoney = getInputFieldValueById('input-add-money');
     const pinNumber = getInputFieldValueById('input-pin-number');
 
+    if(isNaN(addMoney)){
+        alert('Faild to add money')
+        return;
+    }
 
     // wrong way to verify
     if(pinNumber === 1234){
