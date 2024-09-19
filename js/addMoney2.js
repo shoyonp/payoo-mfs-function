@@ -7,7 +7,10 @@ document.getElementById('btn-add-money').addEventListener('click',function(event
 
     // wrong way to verify
     if(pinNumber === 1234){
+        const balance = getTextFieldValueById('account-balance');
+        const newBalance = balance + addMoney;
 
+        document.getElementById('account-balance').innerText = newBalance;
     }
     else{
         alert('Faild to add money.')
